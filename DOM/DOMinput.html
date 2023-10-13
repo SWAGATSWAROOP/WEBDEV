@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM-Input</title>
+    </head>
+    <body>
+        <h1>Swagat Forms Input</h1>
+        <h2>Take input from the forms</h2>
+        <input placeholder="Enter name" id="name">
+        <input placeholder="Password" type="password" placeholder="PW">
+        <button onclick="func1()" id="btn1">Click here</button>
+        <script type="text/javascript">
+            let func1 = () =>{
+                let str = document.getElementById("name").value;
+                window.alert("the username is "+str);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regex</title>
+    </head>
+    <body>
+        <h1 id="Swagat">Swagat Swaroop Parida Swaroop</h1>
+        <script>
+            let x = document.getElementById("Swagat");
+            let z = x.innerHTML.search("Swaroop");
+            document.write(z);
+            let m = "Swagat";
+            let replaceText = () =>{
+                x.innerHTML = m.replace("Swagat","Swaroop");
+            }
+            
+
+        </script>
+        <button onclick="replaceText()">Replace</button>
+    </body>
+</html>
