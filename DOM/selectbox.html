@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Select Box
+        </title>
+    </head>
+    <body>
+        <h1>Select Box</h1>
+        <select id="Country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Russia">Russia</option>
+            <option value="China">China</option>
+        </select>
+        <br>
+        <button onclick="func()">Click here</button>
+        <script>
+            let func = ()=>{
+                let x = document.getElementById("Country");
+                alert("The value choosen is: "+x.value);
+            } 
+        </script>
+    </body>
+</html>

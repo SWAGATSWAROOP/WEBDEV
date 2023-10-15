@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM-Input</title>
+    </head>
+    <body>
+        <h1>Swagat Forms Input</h1>
+        <h2>RadioButtnso</h2>
+        <input placeholder="Enter name" id="grop1" type="radio" name="Swagat" value="BlockChain">BlockChain</input>
+        <input placeholder="Enter name" id="grop2" type="radio" name="Swagat" value="Solidity">Solidity</input>
+        <input placeholder="Enter name" id="grop3" type="radio" name="Swagat">React</input>
+        <!-- Similar Name only can be choosen if not similar name then both can be selected -->
+        <input placeholder="Enter name" id="grop4" type="radio" name="Swagat">Nodejs</input> 
+        <input placeholder="Password" type="password" placeholder="PW">
+        <button onclick="func1()" id="btn1">Click here</button>
+        <script type="text/javascript">
+            let func1 = () =>{
+                let str1 = document.getElementById("grop1");
+                let str2 = document.getElementById("grop2");
+                if(str1.checked == true){
+                    alert("The topic is :"+str1.value);
+                }
+                else if(str2.checked == true){
+                    alert("The topic is :"+str2.value);
+                }
+                else{
+                    alert("Other value is checked");
+                }
+            }
+        </script>
+    </body>
+</html>
