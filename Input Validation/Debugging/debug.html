@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Debugging
+        </title>
+    </head>
+    <body>
+        <input id = "t1" placeholder="text1" type="text"><br><br>
+        <input id = "t2" placeholder="text2" type="text"><br><br>
+        <h2 id="result"></h2>
+        <button id="submit">Add/Concatinate</button>
+        <script type="text/javascript">
+            let button = document.getElementById("submit");
+            button.addEventListener("click",()=>{
+                let num1 = document.getElementById("t1");
+                let num2 = document.getElementById("t2");
+                let res = document.getElementById("result");
+                res.innerHTML = "Result: " + parseInt(num1.value) + parseInt(num2.value);
+            })
+        </script>
+    </body>
+</html>
