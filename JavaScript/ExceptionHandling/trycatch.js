@@ -15,8 +15,12 @@
 try{
     let a = 5;
     console.log("we are inside the try block");
-    blockchain();
+    // blockchain();
 
 }catch(error){
     console.log("Something went wrong");
+    console.log(error.name);
+    console.log(error.message);
+}finally{
+    console.log("this code is always executed");
 }
