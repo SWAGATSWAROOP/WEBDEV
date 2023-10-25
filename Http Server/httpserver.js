@@ -7,12 +7,13 @@ const server = http.createServer((req,res)=>{
         res.write("Hello, This is http servver response\n");
         res.end();
     }
+    if(req.url == '/ineuron/courses'){
+        res.write(JSON.stringify(['BlockChain','Data Science','Java','WebDevelopment']));
+        res.end();
+    }
 });
 
-if(req.url == '/ineuron/courses'){
-    res.write(JSON.stringify(['BlockChain','Data Science','Java','WebDevelopment']));
-    res.end();
-}
+
 
 //listening on a port 
 server.listen(3000);
