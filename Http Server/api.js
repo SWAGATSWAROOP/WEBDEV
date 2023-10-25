@@ -9,8 +9,12 @@ app.get('/',(req,res)=>{
 //Adding a new route
 app.get('/swagat',(req,res) =>{
     res.send("Hello Swagat");
-})
+});
 
-const port = 3000;
+//Hard Coding port values 
+//But now using the port that may be provided by a cloud provider by using process module env that can use the port provided the cloud provider
+//the process env modules store all the environment variables used. 
+const port = process.env.port || 3000;
+
 app.listen(port,()=>console.log(`listeng on port ${port}`));
 
