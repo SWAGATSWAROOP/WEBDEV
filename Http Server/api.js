@@ -16,5 +16,12 @@ app.get('/swagat',(req,res) =>{
 //the process env modules store all the environment variables used. 
 const port = process.env.port || 3000;
 
+//year and month are url getting data from url needs this format
+//month and year are req parameters
+//Dyanamic Routing routing to a different url
+app.get('/swagat/swaroop/:year/:month',(req,res)=>{
+    res.send(req.params);
+});
+
 app.listen(port,()=>console.log(`listeng on port ${port}`));
 
