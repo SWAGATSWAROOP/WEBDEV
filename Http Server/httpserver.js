@@ -9,6 +9,11 @@ const server = http.createServer((req,res)=>{
     }
 });
 
+if(req.url == '/ineuron/courses'){
+    res.write(JSON.stringify(['BlockChain','Data Science','Java','WebDevelopment']));
+    res.end();
+}
+
 //listening on a port 
 server.listen(3000);
 console.log("listening on port 3000");
