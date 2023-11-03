@@ -1,23 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+//Whenever imorting directly from the Arrow Function
+import { Welcome } from './component/Swagat';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Swagat Is a fullstack blockchain developer with Devops.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Welcome />
     </div>
   );
 }
