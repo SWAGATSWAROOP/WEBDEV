@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Swagat from "./components/swagat";
+import Ps from "./components/ps";
+import Satyam from "./components/image";
 
-function Main(){
-  return(
+function Main() {
+  return (
     <div>
-      <Swagat />
-      <h3>Aryan Swaroop Parida</h3>
+      <Ps />
+      <Satyam />
     </div>
   );
 }
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById("root"));
