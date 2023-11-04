@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Ps from "./components/ps";
 import Satyam from "./components/image";
+import './index.css';
 
 function Main() {
   return (
-    <div>
+    <div className="style">
       <Ps />
       <Satyam />
     </div>
