@@ -57,6 +57,7 @@ const Image = (props) => {
       <p>{props.title}</p>
       <h1>{props.award}</h1>
       {/* Passing the children */}
+      {/* Child Can Be accesed only with Children Name */}
       <h1>{children}</h1>
     </div>
   );
