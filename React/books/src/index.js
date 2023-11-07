@@ -35,7 +35,10 @@ const Root = () => {
     <section className="bookList">
       <Image Object={Info1}></Image>
       <Image Object={Info2} award="5 start excellence"></Image>
-      <Image Object={Info3}></Image>
+      {/* Passing Child Prop */}
+      <Image Object={Info3}>
+        <p>Swagat is Full Stack Web Developer BlockChain Developer</p>
+      </Image>
       <Image Object={Info4}></Image>
     </section>
   );
@@ -44,6 +47,7 @@ const Root = () => {
 const Image = (props) => {
   // Object destructuring
   const { title, author, image } = props.Object;
+  const children = props.children;
   return (
     <div className="Books">
       <h1>{title}</h1>
@@ -52,6 +56,8 @@ const Image = (props) => {
       {/* Using Props */}
       <p>{props.title}</p>
       <h1>{props.award}</h1>
+      {/* Passing the children */}
+      <h1>{children}</h1>
     </div>
   );
 };
