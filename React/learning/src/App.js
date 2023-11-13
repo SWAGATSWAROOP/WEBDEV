@@ -1,4 +1,4 @@
-import UseStateBasic from './UseStateBasic';
+import UseStateBasic from './UseStateCounter';
 
 function App() {
   return (
