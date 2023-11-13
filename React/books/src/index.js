@@ -33,6 +33,10 @@ const Info = [
   },
 ];
 
+const clickEvents = () => {
+  alert("Swagat");
+};
+
 // const names = ["Swagat", "Aryan", "Munu", "Sanu"];
 
 // const newNames = names.map((name) => {
@@ -58,7 +62,7 @@ const Image = (props) => {
   const children = props.children;
   return (
     <div className="Books">
-      <h1>{title}</h1>
+      <h1 onClick={() => alert(`${title}`)}>{title}</h1>
       <h5>{author}</h5>
       <img src={image} alt="" />
       {/* Using Props */}
@@ -67,6 +71,9 @@ const Image = (props) => {
       {/* Passing the children */}
       {/* Child Can Be accesed only with Children Name */}
       <h1>{children}</h1>
+      <button type="button" onClick={clickEvents}>
+        ExampleButton
+      </button>
     </div>
   );
 };
