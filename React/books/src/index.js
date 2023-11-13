@@ -2,51 +2,59 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-const Info1 = {
-  title: "Cryptocurrency: Bitcoin & Blockchain: 4 Books in 1 Cryptocurrency",
-  author: "Swagat",
-  image: "https://m.media-amazon.com/images/I/418118R+a9L._SY445_SX342_.jpg",
-};
+const Info = [
+  {
+    id: 1,
+    title: "Cryptocurrency: Bitcoin & Blockchain: 4 Books in 1 Cryptocurrency",
+    author: "Swagat",
+    image: "https://m.media-amazon.com/images/I/418118R+a9L._SY445_SX342_.jpg",
+  },
+  {
+    id: 2,
+    title:
+      "Coding for Kids: Python & Blockchain Programming : A Beginners Guide for Future App Developers - 100+ Activities (2 in 1 C...",
+    author: "Elliot Davis ",
+    image:
+      "https://m.media-amazon.com/images/I/81aStir06GL._AC_UY436_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 3,
+    title: "Cryptocurrency",
+    author: "Aryan",
+    image:
+      "https://m.media-amazon.com/images/I/91eoDgHV6WL._AC_UY436_FMwebp_QL65_.jpg",
+  },
+  {
+    id: 4,
+    title: "AWS",
+    author: "Swagat",
+    image:
+      "https://m.media-amazon.com/images/I/61isV+qaN0L._AC_UY436_FMwebp_QL65_.jpg",
+  },
+];
 
-const Info2 = {
-  title:
-    "Coding for Kids: Python & Blockchain Programming : A Beginners Guide for Future App Developers - 100+ Activities (2 in 1 C...",
-  author: "Elliot Davis ",
-  image:
-    "https://m.media-amazon.com/images/I/81aStir06GL._AC_UY436_FMwebp_QL65_.jpg",
-};
+// const names = ["Swagat", "Aryan", "Munu", "Sanu"];
 
-const Info3 = {
-  title: "Cryptocurrency",
-  author: "Aryan",
-  image:
-    "https://m.media-amazon.com/images/I/91eoDgHV6WL._AC_UY436_FMwebp_QL65_.jpg",
-};
-
-const Info4 = {
-  title: "AWS",
-  author: "Swagat",
-  image:
-    "https://m.media-amazon.com/images/I/61isV+qaN0L._AC_UY436_FMwebp_QL65_.jpg",
-};
+// const newNames = names.map((name) => {
+//   return <h2>{name}</h2>;
+// });
 
 const Root = () => {
   return (
     <section className="bookList">
-      <Image Object={Info1}></Image>
-      <Image Object={Info2} award="5 start excellence"></Image>
-      {/* Passing Child Prop */}
-      <Image Object={Info3}>
-        <p>Swagat is Full Stack Web Developer BlockChain Developer</p>
-      </Image>
-      <Image Object={Info4}></Image>
+      {Info.map((book) => {
+        // return <Image key={book.id} book={book}></Image>;
+        // Similar using spread opreator
+        return <Image key={book.id} {...book}></Image>;
+      })}
     </section>
   );
 };
 
 const Image = (props) => {
   // Object destructuring
-  const { title, author, image } = props.Object;
+  //After using the spread operator we dont need have to specify the object name passed
+  const { title, author, image } = props;
   const children = props.children;
   return (
     <div className="Books">
