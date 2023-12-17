@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Mobile Number Validation</title>
-    </head>
-    <body>
-        <script type="text/javascript">
-            let validate = () =>{
-                let x = document.getElementById("text1").value;
-                //tell the regex with the following condition
-                //^ is used to start a regex
-                //$ shows ending regex
-                let regex = /^([a-z0-9-\._]+)@([a-z0-9-]+)\.([a-z]{2,20})(.[a-z]{2,8})?$/;
-                if(regex.test(x)){
-                    document.getElementById("lbtext").innerHTML  = "Valid";
-                    document.getElementById("lbtext").style.visibility = "Visible";
-                    document.getElementById("lbtext").style.color = "green";
-                }
-                else{
-                    document.getElementById("lbtext").innerHTML  = "Invalid";
-                    document.getElementById("lbtext").style.visibility = "Visible";
-                    document.getElementById("lbtext").style.color = "red";
-                }
-            }
-        </script>
-        <form>
-            <input id = "text1" placeholder="Email" type="text"><br>
-            <label id="lbtext" style="color: red;visibility: hidden;">Invalid</label><br>
-            <button onclick="validate()" type="button">Validate</button>
-        </form>
-    </body>
+  <head>
+    <title>Email Validation</title>
+  </head>
+  <body>
+    <form>
+      <input id="text1" placeholder="Email" type="text" /><br />
+      <label id="lbtext1" style="color: red; visibility: hidden">Invalid</label
+      ><br />
+      <input id="text2" placeholder="Name" type="text" /><br />
+      <label id="lbtext2" style="color: red; visibility: hidden">Invalid</label
+      ><br />
+      <input id="text3" placeholder="Password" type="text" /><br />
+      <label id="lbtext3" style="color: red; visibility: hidden">Invalid</label
+      ><br />
+      <button onclick="validate()" type="button">Validate</button>
+    </form>
+    <script type="text/javascript">
+      let validate = () => {
+        let x = document.getElementById("text1").value;
+        let y = document.getElementById("text2").value;
+        let z = document.getElementById("text3").value;
+        let regex =
+          /^([a-z0-9-\._]+)@([a-z0-9-]+)\.([a-z]{2,20})(.[a-z]{2,8})?$/;
+        let regex2 = /^([a-zA-z]+)$/;
+        let regex3 = /^([a-zA-Z0-9]{6-1000}$)/;
+        if (regex.test(x)) {
+          document.getElementById("lbtext1").innerHTML = "Valid";
+          document.getElementById("lbtext1").style.visibility = "Visible";
+          document.getElementById("lbtext1").style.color = "green";
+        } else {
+          document.getElementById("lbtext1").innerHTML = "Invalid";
+          document.getElementById("lbtext1").style.visibility = "Visible";
+          document.getElementById("lbtext1").style.color = "red";
+        }
+        if (regex2.test(y)) {
+          document.getElementById("lbtext2").innerHTML = "Valid";
+          document.getElementById("lbtext2").style.visibility = "Visible";
+          document.getElementById("lbtext2").style.color = "green";
+        } else {
+          document.getElementById("lbtext2").innerHTML = "Invalid";
+          document.getElementById("lbtext2").style.visibility = "Visible";
+          document.getElementById("lbtext2").style.color = "red";
+        }
+        if (regex3.test(z)) {
+          document.getElementById("lbtext3").innerHTML = "Valid";
+          document.getElementById("lbtext3").style.visibility = "Visible";
+          document.getElementById("lbtext3").style.color = "green";
+        } else {
+          document.getElementById("lbtext3").innerHTML = "Invalid";
+          document.getElementById("lbtext3").style.visibility = "Visible";
+          document.getElementById("lbtext3").style.color = "red";
+        }
+      };
+    </script>
+  </body>
 </html>

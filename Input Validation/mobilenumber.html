@@ -7,9 +7,6 @@
         <script type="text/javascript">
             let validate = () =>{
                 let x = document.getElementById("text1").value;
-                //tell the regex with the following condition
-                //^ is used to start a regex
-                //$ shows ending regex
                 let regex = /^[6-9]\d{9}$/;
                 if(regex.test(x)){
                     document.getElementById("lbtext").innerHTML  = "Valid";
