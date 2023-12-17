@@ -11,12 +11,7 @@ export const data = [
   },
   {
     id: 3,
-    name: "Swagat",
-    course: "B.TECH CSE",
-  },
-  {
-    id: 1,
-    name: "Swagat",
+    name: "Sarthak",
     course: "B.TECH CSE",
   },
 ];
