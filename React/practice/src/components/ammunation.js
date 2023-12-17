@@ -43,8 +43,8 @@ const Gunsinfo = (props) =>{
         {props.object.des}
       </p>
     </>
-  )
-};
+  );
+}
 
 const Gun = () => {
   return(
