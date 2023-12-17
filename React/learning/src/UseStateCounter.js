@@ -1,5 +1,4 @@
 import React from "react";
-
 //One component and all the changes is done in this statement
 const UseStateCounter = () =>{
     const[message,setMessage] = React.useState(0);
