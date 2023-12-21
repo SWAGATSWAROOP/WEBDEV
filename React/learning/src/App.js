@@ -1,4 +1,4 @@
-import UseStateBasic from "./UseStateObject";
+import UseStateBasic from "./useEffectBasic";
 
 function App() {
   return (
