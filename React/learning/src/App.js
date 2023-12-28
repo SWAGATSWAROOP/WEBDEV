@@ -1,4 +1,4 @@
-import Setup from "./useEffectCleanup";
+import Setup from "./ShortCircuit";
 import "./App.css";
 
 function App() {
