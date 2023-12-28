@@ -1,10 +1,10 @@
-import UseStateBasic from "./useEffectCleanup";
+import Setup from "./useEffectCleanup";
 import "./App.css";
 
 function App() {
   return (
     <div className="container">
-      <UseStateBasic />
+      <Setup />
     </div>
   );
 }
