@@ -1,6 +1,6 @@
 import { useState } from "react";
-import UseEffectCleanUp from './useEffectCleanup';
-import UseStateCounter from './UseStateCounter'
+import UseEffectCleanUp from "./useEffectCleanup";
+import CleanupForT from "./CleanupforTernary";
 
 const TernaryOp = () => {
   const [present, setPresent] = useState(false);
@@ -16,7 +16,7 @@ const TernaryOp = () => {
           <h1>Swagat</h1>
         </div>
       )} */}
-      {present ? <UseEffectCleanUp/> : <UseStateCounter/>}
+      {present ? <UseEffectCleanUp /> : <CleanupForT/>}
       <button onClick={() => setPresent(!present)}>Change</button>
     </>
   );

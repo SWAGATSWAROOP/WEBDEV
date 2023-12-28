@@ -1,4 +1,4 @@
-import Setup from "./TernaryOperator.js";
+import Setup from "./UseRefBasics.js";
 import "./App.css";
 
 function App() {
