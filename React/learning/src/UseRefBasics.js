@@ -1,4 +1,4 @@
-import { useRef,useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const UseRefBAsics = () => {
   const refContainer = useRef(null);
@@ -10,10 +10,10 @@ const UseRefBAsics = () => {
     console.log(ref.current);
   };
 
-  //Only one time render.
-  useEffect(()=>{
+  //Only one time render and doesn't pass the dependency array also.
+  useEffect(() => {
     console.log(refContainer.current.value);
-  })
+  });
 
   return (
     <>
