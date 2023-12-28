@@ -1,4 +1,4 @@
-import Setup from "./ShortCircuit";
+import Setup from "./TernaryOperator.js";
 import "./App.css";
 
 function App() {
