@@ -1,5 +1,6 @@
 import Provider from "./Provider";
 import Context from "./Context";
+// import { useContext } from "react";
 const App = () => {
   return (
     <>
@@ -20,7 +21,11 @@ const Child2 = () => {
 };
 
 const Child3 = () => {
+  // const a = useContext(Context);
   return (
+    // <> this also works
+    //   <h1>{a.accepted}</h1>
+    // </>
     <Context.Consumer>
       {(context) => (
         <>
